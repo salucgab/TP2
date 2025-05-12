@@ -5,6 +5,8 @@ class Plateau{
 
     public Plateau(){
 	pieces = new ArrayList<Piece>();
+	this.ajouterPiece(new Tavalier('B', new Position("C2")));
+	this.ajouterPiece(new Tavalier('B', new Position("F2")));
 	this.ajouterPiece(new Tour('B', new Position("A1")));
 	this.ajouterPiece(new Cavalier('B', new Position("B1")));
 	this.ajouterPiece(new Fou('B', new Position("C1")));
@@ -14,11 +16,24 @@ class Plateau{
 	this.ajouterPiece(new Cavalier('B', new Position("G1")));
 	this.ajouterPiece(new Tour('B', new Position("H1")));
 
-	for(char c = 'A'; c < 'I' ; c++){
+	for(char c = 'A'; c < 'C' ; c++){
 	    this.ajouterPiece(new PionBlanc(new Position(c+"2")));
 	    this.ajouterPiece(new PionNoir(new Position(c+"7")));
 	    }
 
+	for(char c = 'D'; c < 'F' ; c++){
+		this.ajouterPiece(new PionBlanc(new Position(c+"2")));
+		this.ajouterPiece(new PionNoir(new Position(c+"7")));
+		}
+	
+	for(char c = 'G'; c < 'I' ; c++){
+		this.ajouterPiece(new PionBlanc(new Position(c+"2")));
+		this.ajouterPiece(new PionNoir(new Position(c+"7")));
+		}
+	
+	
+	this.ajouterPiece(new Tavalier('N', new Position("C7")));
+	this.ajouterPiece(new Tavalier('N', new Position("F7")));
 	this.ajouterPiece(new Tour('N', new Position("A8")));
 	this.ajouterPiece(new Cavalier('N', new Position("B8")));
 	this.ajouterPiece(new Fou('N', new Position("C8")));
