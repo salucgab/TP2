@@ -12,7 +12,7 @@ class Favalier extends Piece{
 
 
     public String getType(){
-    	return new String("dame");
+    	return new String("favalier");
     }
     
 
